@@ -1,0 +1,148 @@
+@import '../node_modules/animate.css/animate.css';
+:root{
+    /* color */
+    --blue:#0000FF;
+    --black:#000000;
+    --grey:#CCCCCC;
+    --white:#FFFFFF;
+    --sky:#87CEEB;
+
+    /* font size */
+    --font-size-sm: 0.75rem;   /* 12px */
+    --font-size-base: 1rem;    /* 16px, base */
+    --font-size-md: 1.25rem;   /* 20px */
+    --font-size-lg: 1.5rem;    /* 24px */
+    --font-size-xl: 1.75rem;   /* 28px */
+    --font-size-xxl: 2rem;     /* 32px */
+    --font-size-xxxl: 2.5rem; /* 40px */
+    --font-size-title:5rem;
+
+    
+}
+body{
+    /* media query */
+    --br-xs:600px;
+    --br-s:768px;
+    --br-m: 992px;
+    --br-l:1024px;
+    --br-xl:1200px;
+
+}
+
+/* font */
+h1,h2,h3{
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+p{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+  
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/* loader page */
+#loaderPage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--blue);
+    /* opacity: 1;
+    transition: opacity 1s ease-out; */
+}
+#contentLoader{
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--black);
+    font-size: var(--font-size-title);
+}
+
+
+/* header e nav */
+
+#home{
+    display: none;
+    height: 100vh;
+    background-color: var(--black);
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    padding: 0 20px;
+    background-color: var(--blue);
+}
+.logo{
+    color: var(--white);
+    text-decoration: none;
+    font-size: var(--font-size-md);
+}
+.navLinks{
+    display: flex;
+    list-style-type: none;
+}
+.navLinks a{
+    color: var(--white);
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: var(--font-size-base);
+    text-transform: uppercase;
+}
+
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.line{
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    margin: 3px 0;
+}
+
+
+@media screen and (max-width:768px) {
+    /* questa parte .link container importante overflow e il top della stessa altezza navbar */
+    .linkContainer{
+        position: absolute;
+        height: 0px;
+        top:10vh;
+        left: 0;
+        width: 100%;
+        background-color: var(--blue);
+        transition:0.2s;
+        overflow: hidden;
+    }
+    .navLinks{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        row-gap: 2.5rem;
+        list-style-type: none;
+    }
+    
+    .hamburger{
+        display: block;
+    }
+    .showMenu{
+        top: 8vh;
+        height: 92vh;
+        padding-top: 10rem;
+    }
+    
+}
+
