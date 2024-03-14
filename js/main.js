@@ -16,6 +16,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
     function showContent(){
         const homePage = document.getElementById("home");
         homePage.style.display = "block";
+        const containerSkill = document.querySelector(".mySkill");
+        containerSkill.style.display = "block";
+        /* const slide = document.querySelectorAll(".containerSlide");
+        slide.style.display = "flex"; */
     }
 })
 

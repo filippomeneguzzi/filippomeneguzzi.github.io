@@ -17,15 +17,15 @@
     --font-size-xxxl: 2.5rem; /* 40px */
     --font-size-title:5rem;
 
-    
-}
-body{
     /* media query */
     --br-xs:600px;
     --br-s:768px;
     --br-m: 992px;
     --br-l:1024px;
     --br-xl:1200px;
+}
+body{
+    color: var(--white);
 
 }
 
@@ -69,10 +69,18 @@ p{
 
 /* header e nav */
 
+
 #home{
     display: none;
+    width: 100%;
     height: 100vh;
-    background-color: var(--black);
+}
+/* settaggio video background */
+.backVideo{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
 nav{
@@ -114,6 +122,41 @@ nav{
     margin: 3px 0;
 }
 
+/* home details */
+.homeDetails{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10vh 40px 20px 40px;
+    height: 100vh;
+}
+.homeName{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
+}
+.homeName h2{
+    /* ingrandire per dekstop */
+    font-size: var(--font-size-xxxl);
+}
+.homeBtn{
+    margin-top: 40px;
+}
+.contactBtn{
+    width: 160px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+}
+
+
 
 @media screen and (max-width:768px) {
     /* questa parte .link container importante overflow e il top della stessa altezza navbar */
@@ -146,3 +189,55 @@ nav{
     
 }
 
+@media screen and (min-width:992px){
+    .homeName h2{
+        font-size: var(--font-size-title);
+    }
+}
+
+
+
+
+
+/* my skill */
+@keyframes slide{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.mySkill{
+    display: none;
+}
+.mySkill h2{
+    text-align: center;
+    font-size: var(--font-size-xxl);
+    color: var(--black);
+    padding-top: 50px;
+}
+.skilLine{
+    /* forse diminuire per schermi piuù grandi */
+    width: 40%;
+    height: 2px;
+    margin: auto auto;
+    background-color: var(--black);
+}
+.container{
+    display: flex;
+    overflow: hidden;
+    padding: 60px 0;
+    background-color: var(--white);
+    white-space: nowrap;
+}
+
+.containerSlide{
+    display: flex;
+    animation: 30s slide infinite linear;
+}
+.containerSlide i{
+    padding: 30px;
+    font-size: var(--font-size-title);
+}
