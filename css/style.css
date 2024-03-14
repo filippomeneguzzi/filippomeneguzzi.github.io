@@ -1,4 +1,9 @@
 @import '../node_modules/animate.css/animate.css';
+
+/* website create with technique MOBILE FIRST */
+
+
+
 :root{
     /* color */
     --blue:#0000FF;
@@ -158,6 +163,126 @@ nav{
 
 
 
+
+
+
+
+
+/* my skill */
+@keyframes slide{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+#mySkill{
+    display: none;
+    height: 60vh;
+}
+#mySkill h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: var(--font-size-xxxl);
+    color: var(--black);
+    padding-top: 80px;
+}
+.skilLine{
+    /* forse diminuire per schermi piuù grandi */
+    width: 40%;
+    height: 2px;
+    margin: auto auto;
+    background-color: var(--black);
+}
+.container{
+    display: flex;
+    overflow: hidden;
+    padding: 60px 0;
+    background-color: var(--white);
+    white-space: nowrap;
+}
+
+.containerSlide{
+    display: flex;
+    animation: 30s slide infinite linear;
+}
+.containerSlide i{
+    padding: 30px;
+    font-size: var(--font-size-title);
+}
+
+/* about me */
+
+#aboutMe{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--blue);
+}
+
+.aboutTxt{
+    text-align: center;
+    padding: 50px;
+}
+.aboutTxt h2{
+    text-transform: uppercase;
+    font-size: var(--font-size-xxxl);
+    padding-bottom: 40px;
+}
+
+
+.mySelf{
+    height: 350px;
+    width: 350px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.mySelf img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+.mySelf img:hover{
+    transform: scale(1.4);
+}
+
+
+/* footer */
+#footer{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--black);
+    padding: 20px;
+    height: 40vh;
+    row-gap: 30px;
+}
+.email a{
+    color: var(--white);
+    font-size: var(--font-size-xl);
+    padding: 40px;
+}
+.containerContact{
+    display: flex;
+}
+.containerContact a{
+    color: var(--white);
+}
+.containerContact i{
+    padding: 30px;
+    font-size: var(--font-size-xxl);
+}
+.containerContact a:hover{
+    transform: scale(1.4);
+    transition: 0.4s;
+}
+
+/* breakpoint */
 @media screen and (max-width:768px) {
     /* questa parte .link container importante overflow e il top della stessa altezza navbar */
     .linkContainer{
@@ -193,51 +318,4 @@ nav{
     .homeName h2{
         font-size: var(--font-size-title);
     }
-}
-
-
-
-
-
-/* my skill */
-@keyframes slide{
-    from{
-        transform: translateX(0);
-    }
-    to{
-        transform: translateX(-100%);
-    }
-}
-
-.mySkill{
-    display: none;
-}
-.mySkill h2{
-    text-align: center;
-    font-size: var(--font-size-xxl);
-    color: var(--black);
-    padding-top: 50px;
-}
-.skilLine{
-    /* forse diminuire per schermi piuù grandi */
-    width: 40%;
-    height: 2px;
-    margin: auto auto;
-    background-color: var(--black);
-}
-.container{
-    display: flex;
-    overflow: hidden;
-    padding: 60px 0;
-    background-color: var(--white);
-    white-space: nowrap;
-}
-
-.containerSlide{
-    display: flex;
-    animation: 30s slide infinite linear;
-}
-.containerSlide i{
-    padding: 30px;
-    font-size: var(--font-size-title);
 }

@@ -16,8 +16,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
     function showContent(){
         const homePage = document.getElementById("home");
         homePage.style.display = "block";
-        const containerSkill = document.querySelector(".mySkill");
+        const containerSkill = document.getElementById("mySkill");
         containerSkill.style.display = "block";
+        const aboutMe = document.getElementById("aboutMe");
+        aboutMe.style.display = "flex";
+        const footer = document.getElementById("footer");
+        footer.style.display = "flex";
         /* const slide = document.querySelectorAll(".containerSlide");
         slide.style.display = "flex"; */
     }
