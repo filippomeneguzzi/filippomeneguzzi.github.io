@@ -151,13 +151,13 @@ nav{
     margin-top: 40px;
 }
 .contactBtn{
-    width: 160px;
-    height: 40px;
+    width: 200px;
+    height: 60px;
     border-radius: 10px;
     border: none;
     background-color: var(--blue);
     color: var(--white);
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-base);
     text-transform: uppercase;
 }
 
@@ -189,13 +189,7 @@ nav{
     color: var(--black);
     padding-top: 80px;
 }
-.skilLine{
-    /* forse diminuire per schermi piuù grandi */
-    width: 40%;
-    height: 2px;
-    margin: auto auto;
-    background-color: var(--black);
-}
+
 .container{
     display: flex;
     overflow: hidden;
@@ -264,8 +258,8 @@ nav{
 }
 .email a{
     color: var(--white);
-    font-size: var(--font-size-xl);
-    padding: 40px;
+    font-size: var(--font-size-lg);
+    padding: 20px;
 }
 .containerContact{
     display: flex;
@@ -283,6 +277,15 @@ nav{
 }
 
 /* breakpoint */
+@media screen and (max-width:400px){
+    #aboutMe{
+        height: auto;
+    }
+    .email a{
+        padding: 10px;
+        font-size: var(--font-size-md);
+    }
+}
 @media screen and (max-width:768px) {
     /* questa parte .link container importante overflow e il top della stessa altezza navbar */
     .linkContainer{
@@ -310,6 +313,11 @@ nav{
         top: 8vh;
         height: 92vh;
         padding-top: 10rem;
+    }
+
+    .email a{
+        padding: 10px;
+        font-size: var(--font-size-md);
     }
     
 }
