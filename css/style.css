@@ -215,8 +215,13 @@ nav{
     align-items: center;
     height: 100vh;
     background-color: var(--blue);
+    padding: 20px;
 }
-
+.txt-aboutMe-Container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .aboutTxt{
     text-align: center;
     padding: 50px;
@@ -277,17 +282,7 @@ nav{
 }
 
 /* breakpoint */
-@media screen and (max-width:400px){
-    #aboutMe{
-        height: auto;
-    }
-    .email a{
-        padding: 10px;
-        font-size: var(--font-size-md);
-    }
-}
-@media screen and (max-width:768px) {
-    /* questa parte .link container importante overflow e il top della stessa altezza navbar */
+@media only screen and (max-width:480px){
     .linkContainer{
         position: absolute;
         height: 0px;
@@ -314,6 +309,49 @@ nav{
         height: 92vh;
         padding-top: 10rem;
     }
+    #aboutMe{
+        height: auto;
+    }
+    .email a{
+        padding: 10px;
+        font-size: var(--font-size-md);
+    }
+}
+@media only screen and (min-width:481px) and (max-width:768px) {
+    /* questa parte .link container importante overflow e il top della stessa altezza navbar */
+    .linkContainer{
+        position: absolute;
+        height: 0px;
+        top:10vh;
+        left: 0;
+        width: 100%;
+        background-color: var(--blue);
+        transition:0.2s;
+        overflow: hidden;
+    }
+    .navLinks{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        row-gap: 2.5rem;
+        list-style-type: none;
+    }
+    
+    .hamburger{
+        display: block;
+    }
+
+    .showMenu{
+        top: 8vh;
+        height: 92vh;
+        padding-top: 10rem;
+    }
+    #mySkill{
+        height: 45vh;
+    }
+    #aboutMe{
+        height: auto;
+    }
 
     .email a{
         padding: 10px;
@@ -322,8 +360,33 @@ nav{
     
 }
 
-@media screen and (min-width:992px){
+@media screen and (min-width:770px) and (max-width:992px){
     .homeName h2{
         font-size: var(--font-size-title);
     }
+    #mySkill{
+        height: 45vh;
+    }
+    #aboutMe{
+        height: auto;
+    }
+}
+
+@media screen and (min-width:993px){
+    .homeName h2{
+        font-size: var(--font-size-title);
+    }
+    .txt-aboutMe-Container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 100%;
+    }
+    .aboutTxt{
+        width: 50%;
+    }
+    #mySkill{
+        height: auto;
+    }
+
 }
