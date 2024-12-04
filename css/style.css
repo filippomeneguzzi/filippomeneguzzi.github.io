@@ -30,6 +30,11 @@
     --br-xl:1200px;
 }
 body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--black);
     color: var(--white);
 
 }
@@ -390,3 +395,5 @@ nav{
     }
 
 }
+
+
